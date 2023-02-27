@@ -80,19 +80,24 @@ sentence = "The fox is on the table and a small turtle is on the floor of the bu
 
 langExtended = LANGUAGE_EXTENDED[lang]
 
+# Run the RDR Pos tagger to obtain a pos tag for each word
 pos_tags = pos_tag(sentence, lang)
 
 print("\n>>>>> POS TAGAGGING: ")
 print(">>>>> " + str(pos_tags))
 
+# Load the grammar from a file and add the pos tags as terminals rules
 grammar = load_grammar(pos_tags, lang)
 
+# Initialize the parser with the corresponding grammar
 parser = EarleyChartParser(grammar, trace=0)
 
+# Use nltk to perform the word tokenization, accordingly to the language specified
 text_tokenized = word_tokenize(sentence, langExtended)
 
 print("\n>>>>> First admissible tree: ")
 for tree in parser.parse(text_tokenized):
+    # Tree with all the empty nodes removed
     print(remove_empty_nodes(tree))
     # Print only the first one, ambiguity blocked here
     break

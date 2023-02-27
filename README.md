@@ -1,5 +1,7 @@
 # Assignment 2 NLP
 
+Repository url: [assignment-2](https://github.com/davideberga/assign-2-nlp)
+
 ## Introduction
 
 This project contains a pipeline to produce the syntax tree of a sentence, given its language. The approach used is the pure symbolic one with a context free grammar as a base.

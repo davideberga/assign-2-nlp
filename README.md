@@ -12,6 +12,8 @@ This project contains a pipeline to produce the syntax tree of a sentence, given
 
 ## Usage
 
+```python3 -m pip install -r requirements.txt```
+
 Inside the ```main.py``` edit the language and the sentence:
 
 ```

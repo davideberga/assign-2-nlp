@@ -75,8 +75,8 @@ def remove_empty_nodes(tree):
     return tree
 
 # EDIT to test
-lang = "ge"
-sentence = "Die böse Hexe durchstreift den Wald"
+lang = "en"
+sentence = "The fox is on the table and a small turtle is on the floor of the building ."
 
 langExtended = LANGUAGE_EXTENDED[lang]
 
